@@ -1,0 +1,10 @@
+These files are extracted unmodified from STM32F0xx_StdPeriph_Lib_V1.6.0.
+
+	https://www.st.com/en/embedded-software/stsw-stm32048.html
+
+...with the exception of "system_stm32f0xx.h", which only needs to exist as a
+stub for compatibility with stm32f0xx.h (which includes it but does not actually
+reference anything declared in it).
+
+The proprietary SLA0048 license from STMicroelectronics explicitly allows me to
+redistribute their header files. See LICENSE in this directory.
