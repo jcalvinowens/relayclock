@@ -50,8 +50,8 @@ Time is kept by the built-in STM32 RTC, and the firmware is hardcoded to correct
 for USA/California daylight savings time through 2025.
 
 The STM32 is powered by a CR2032 battery. The MCU draws ~1-2mA for ~200ms each
-minute when updating the digits, and ~4uA when sleeping, so the battery will
-hopefully last a few years (we're six months into testing...).
+minute when updating the digits, and ~4uA when sleeping. All three of the v1.2
+prototypes were correct within ten minutes after 18 months of being unplugged.
 
 ![](img/current.jpg)
 
