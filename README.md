@@ -15,19 +15,19 @@ TL;DR:
 * [Layout](prod/v012-LAYOUT.pdf)
 * [Firmware](firmware.c)
 
-![](img/v012.jpg)
+![](https://static.wbinvd.org/img/relayclock/v012.jpg)
 
 Design
 ------
 
-![](img/mcu.jpg)
+![](https://static.wbinvd.org/img/relayclock/mcu.jpg)
 
 The relays are controlled by an STM32F0 ARM Cortex M0, running at 8MHz. The
 COILP line controls 28 pairs of oppositely wired SPDT solid state switches which
 function as H-bridges to set the direction of current pulse through the relay
 coils.
 
-![](img/relays.jpg)
+![](https://static.wbinvd.org/img/relayclock/relays.jpg)
 
 The 28 push-pull segment GPIOs are wired to bases of four Darlington array
 packages, which sink current from the relay coils. The 5V LDO can probably
@@ -44,7 +44,7 @@ clock digits. When the clock is plugged back in, the flag forces all 28 relays
 to be latched, so the assumption of the relay state being the prior minute's
 digits is always valid.
 
-![](img/dars.jpg)
+![](https://static.wbinvd.org/img/relayclock/dars.jpg)
 
 Time is kept by the built-in STM32 RTC, and the firmware is hardcoded to correct
 for USA/California daylight savings time through 2025.
@@ -53,7 +53,7 @@ The STM32 is powered by a CR2032 battery. The MCU draws ~1-2mA for ~200ms each
 minute when updating the digits, and ~4uA when sleeping. All three of the v1.2
 prototypes were correct within ten minutes after 18 months of being unplugged.
 
-![](img/current.jpg)
+![](https://static.wbinvd.org/img/relayclock/current.jpg)
 
 Datasheets:
 
